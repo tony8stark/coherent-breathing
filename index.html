@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coherent Breathing Timer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧘</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <<div class="overlay"></div>
+    <div class="top-menu">
+        <div class="background-select">
+            <select id="background-dropdown">
+                <option value="mountains">Mountains at night</option>
+                <option value="forest">Mysterious Forest</option>
+                <option value="beach">Sunny Beach</option>
+                <option value="downtown">Busy Downtown</option>
+                <option value="cafe">Central Perk Cafe</option>
+            </select>
+        </div>
+        <a href="https://www.youtube.com/watch?v=Vi0_7idqcFI" target="_blank" class="video-link">
+            <span>Rick Rubin & Dr. Huberman</span>
+            <span class="accent">Breathing Exercise</span>
+        </a>
+    </div>
+    <div class="blurred-container">
+        <div class="container">
+            <h1>Coherent Breathing Timer</h1>
+            <div id="timer-container">
+                <div id="timer">01:00</div>
+            </div>
+            <div id="breathing-circle"></div>
+            <div id="action">Ready to begin...</div>
+            <div class="controls">
+                <button id="startPause">Start</button>
+                <button id="reset" class="hidden">Reset</button>
+                <select id="duration">
+                    <option value="1">1 min</option>
+                    <option value="3">3 min</option>
+                    <option value="5">5 min</option>
+                </select>
+            </div>
+            <div class="audio-control">
+                <input type="checkbox" id="sound-toggle" checked>
+                <label for="sound-toggle">Enable sound</label>
+            </div>
+        </div>
+    </div>
+
+    <audio id="inhale-sound" src="https://freesound.org/data/previews/339/339809_5121236-lq.mp3"></audio>
+    <audio id="exhale-sound" src="https://cdn.freesound.org/previews/696/696632_3655844-lq.mp3"></audio>
+
+    <div id="completion-message" style="display: none;">
+        <img src="https://www.coor.com/siteassets/insights/2023/huberman_header.jpg" alt="Andrew Huberman">
+        <p>Congratulations! You've just taken a significant step towards improving your Heart Rate Variability (HRV). Consistent practice of coherent breathing can lead to better stress management, improved cognitive function, and enhanced overall well-being.</p>
+        <button onclick="hideCompletionMessage()">Close</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
