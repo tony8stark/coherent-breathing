@@ -58,13 +58,18 @@ body.dark-mode {
 
 .left-controls {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px; /* Adds space between items */
 }
 
 .right-controls {
     display: flex;
     align-items: center;
+}
+
+.right-controls > * {
+  width: 100%; /* Makes each item take the full width of the container */
 }
 
 #darkModeToggle {
