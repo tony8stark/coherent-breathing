@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
      // Background changing functionality
      const backgroundDropdown = document.getElementById('background-dropdown');
- const backgroundImages = {
+     const backgroundImages = {
      mountains: 'https://images.unsplash.com/photo-1519681393784-d120267933ba',
      forest: 'https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1',
      beach: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
@@ -165,4 +165,22 @@ document.addEventListener('DOMContentLoaded', function() {
  window.hideCompletionMessage = hideCompletionMessage;
 
  resetTimer(); // Initialize the timer display
+
+ const darkModeToggle = document.getElementById('darkModeToggle');
+    
+function setDarkMode(isDark) {
+   document.body.classList.toggle('dark-mode', isDark);
+   darkModeToggle.textContent = isDark ? '☀️' : '🌙';
+   localStorage.setItem('darkMode', isDark);
+}
+
+darkModeToggle.addEventListener('click', function() {
+   const isDark = !document.body.classList.contains('dark-mode');
+   setDarkMode(isDark);
+});
+
+// Check for saved dark mode preference
+if (localStorage.getItem('darkMode') === 'true') {
+   setDarkMode(true);
+}
 });
