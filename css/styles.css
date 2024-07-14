@@ -63,13 +63,13 @@ body.dark-mode {
     gap: 10px; /* Adds space between items */
 }
 
+.left-controls > * {
+  width: 100%; /* Makes each item take the full width of the container */
+}
+
 .right-controls {
     display: flex;
     align-items: center;
-}
-
-.right-controls > * {
-  width: 100%; /* Makes each item take the full width of the container */
 }
 
 #darkModeToggle {
