@@ -59,6 +59,7 @@ body.dark-mode {
 .left-controls {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .right-controls {
@@ -69,7 +70,6 @@ body.dark-mode {
 #darkModeToggle {
     font-size: 1.5rem;
     cursor: pointer;
-    margin-right: 10px;
 }
 
 .background-select {
@@ -93,7 +93,7 @@ body.dark-mode {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 150px; /* Adjust as needed */
+    margin-left: 10px;
 }
 
 .background-select select:hover, .video-link:hover {
@@ -150,29 +150,26 @@ body.dark-mode {
  }
 
 #darkModeToggle {
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: fixed;  /* Changed from absolute to fixed */
+    position: absolute;
     top: 10px;
     right: 10px;
-    z-index: 1001;  /* Ensure it's above the overlay */
 }
 
 /* Adjust for mobile */
 @media (max-width: 600px) {
     .top-menu {
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .left-controls, .right-controls {
         width: 100%;
         justify-content: space-between;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .background-select {
-        margin-right: 0;
+        margin: 5px 0;
     }
 
     .video-link {
