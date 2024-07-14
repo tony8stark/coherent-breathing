@@ -56,9 +56,23 @@ body.dark-mode {
     z-index: 1001;
 }
 
+.left-controls {
+    display: flex;
+    align-items: center;
+}
+
+.right-controls {
+    display: flex;
+    align-items: center;
+}
+
 #darkModeToggle {
     font-size: 1.5rem;
     cursor: pointer;
+    margin-right: 10px;
+}
+
+.background-select {
     margin-right: 10px;
 }
 
@@ -79,6 +93,7 @@ body.dark-mode {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: 150px; /* Adjust as needed */
 }
 
 .background-select select:hover, .video-link:hover {
@@ -147,21 +162,21 @@ body.dark-mode {
 @media (max-width: 600px) {
     .top-menu {
         flex-wrap: wrap;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
-    #darkModeToggle {
-        order: -1;
-        margin-right: auto;
+    .left-controls, .right-controls {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 5px;
     }
 
-    .background-select, .video-link {
+    .background-select {
+        margin-right: 0;
+    }
+
+    .video-link {
         font-size: 0.8rem;
-        margin-top: 5px;
-    }
-
-    .blurred-container {
-        margin-top: 100px;
     }
 }
 
